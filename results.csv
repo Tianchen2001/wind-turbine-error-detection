@@ -1,0 +1,9 @@
+Model, Accuracy, F1 Score, AUC
+GMM, 0.617, 0.382, 0.599
+HMM, 0.628, 0.414, 0.611
+Transformer-h2-l2, 0.914, 0.917, 0.923
+Transformer-h2-l4, 0.985, 0.985, 0.985
+Transformer-h2-l6, 1.000, 1.000, 1.000
+Transformer-h4-l2, 0.971, 0.964, 0.966
+Transformer-h4-l4, 1.000, 1.000, 1.000
+Transformer-h8-l6, 1.000, 1.000, 1.000
