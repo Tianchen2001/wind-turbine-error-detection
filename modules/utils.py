@@ -3,9 +3,11 @@ import librosa
 
 from torch.utils.data import random_split
 
-def process_audio_data(audio_path):
+def process_audio_data(audio_path, target_sample_rate=44100):
     # Load audio data
-    audio, _ = librosa.load(audio_path, sr=None)
+    audio, sample_rate = librosa.load(audio_path, sr=None)
+    # Resample audio data
+    audio = librosa.resample(audio, orig_sr=sample_rate, target_sr=target_sample_rate)
     # Compute the STFT
     stft = librosa.core.stft(audio, n_fft=2048, window='hann', hop_length=1024)
     # Compute the magnitude spectrogram
